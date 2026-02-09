@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo rosa pixeleado */
+body {
+  height: 100vh;
+  background-color: #ffc0cb;
+  background-image:
+    linear-gradient(90deg, rgba(255,182,193,.4) 50%, transparent 50%),
+    linear-gradient(rgba(255,182,193,.4) 50%, transparent 50%);
+  background-size: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Corazones */
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* Caja */
+.container {
+  background: rgba(255,255,255,0.9);
+  padding: 40px;
+  border-radius: 26px;
+  text-align: center;
+  max-width: 95%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Pantalla 1 */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+}
+
+.pregunta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.pregunta span {
+  font-size: 1.9rem;
+}
+
+.pregunta img {
+  width: 120px;
+  border-radius: 14px;
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+button {
+  padding: 15px 36px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+button:first-child {
+  background: #ff7aa2;
+  color: white;
+}
+
+button:last-child {
+  background: #e5e5e5;
+}
+
+/* Pantalla 2 */
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.grande {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Pantalla 3 */
+.letra {
+  font-size: 2.1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Pantalla final */
+.final-img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.final-text {
+  font-size: 1.5rem;
+  font-style: italic;
+}
